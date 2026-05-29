@@ -5,33 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - Blue Fox Summit</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles/settingsStyle.css">
 </head>
 <body>
     <div class="dashboard-layout">
-         <div class="dashboard-container">
-        
-        <div class="mobile-header">
-            <div class="hamburger" id="hamburger-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <h2>BLUE FOX SUMMIT</h2>
-            <div class="mobile-profile">
-                <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" alt="Profile" class="profile-img">
-            </div>
-        </div>
-
+         
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-brand">
                     <h2>BLUE FOX SUMMIT<br>INSURANCE AGENCY</h2>
                 </div>
-                <div class="close-sidebar" id="close-sidebar">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
             </div>
             
-           <nav class="sidebar-nav">
+            <nav class="sidebar-nav">
                 <ul>
                     <li><a href="dashboard.html"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
                     <li><a href="appointments.html"><i class="fa-regular fa-calendar-check"></i> Appointments</a></li>
@@ -44,25 +32,36 @@
 
             <div class="sidebar-footer">
                 <div class="user-profile">
-                    <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" alt="Profile Picture" class="profile-img">
+                    <div class="avatar-circle">US</div>
                     <div class="user-info">
-                        <span class="user-name" id="sidebar-user-name">Loading...</span>
+                        <span class="user-name">Audrey Cristobal<br>Fabian</span>
                         <span class="user-badge"><i class="fa-solid fa-award"></i> Agent</span>
                     </div>
                 </div>
-                <a href="#" id="logout-btn" class="sidebar-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                <a href="logout.html" id="logout-btn" class="sidebar-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
+                </a>
             </div>
         </aside>
 
-        <div class="sidebar-overlay" id="sidebar-overlay"></div>
- 
-
-        
         <main class="main-content">
             
-            <header class="page-header">
-                <h1>Settings</h1>
-                <p>Manage your Account and Preferences</p>
+            <header class="top-header">
+                <div class="page-header">
+                    <h1>Settings</h1>
+                    <p>Manage your Account and Preferences</p>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search here">
+                    </div>
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
             </header>
 
             <div class="settings-grid">
@@ -176,6 +175,5 @@
             </div>
         </main>
     </div>
-    
 </body>
 </html>
