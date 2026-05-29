@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+$host = '172.17.14.97';
 $dbname = 'blue_fox_agency';
 $username = 'root'; // Change if needed
 $password = ''; // Change if needed

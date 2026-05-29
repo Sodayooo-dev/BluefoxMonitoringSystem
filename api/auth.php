@@ -7,7 +7,7 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Database Connection Variables
-$host = 'localhost';
+$host = '172.17.14.97';
 $dbname = 'blue_fox_agency'; // Your new insurance database
 $username = 'root';          // Default XAMPP username
 $password = '';              // Default XAMPP password
