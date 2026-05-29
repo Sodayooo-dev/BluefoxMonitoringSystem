@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Blue Fox Summit</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <div class="mobile-header">
+            <div class="hamburger" id="hamburger-menu"><i class="fa-solid fa-bars"></i></div>
+            <h2>BLUE FOX SUMMIT</h2>
+            <div class="mobile-profile"><img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" alt="Profile" class="profile-img"></div>
+        </div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <h2>BLUE FOX SUMMIT<br>INSURANCE AGENCY</h2>
+                </div>
+                <div class="close-sidebar" id="close-sidebar"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
+                    <li class="active"><a href="appointments.html"><i class="fa-regular fa-calendar-check"></i> Appointments</a></li>
+                    <li><a href="clients.html"><i class="fa-solid fa-user-group"></i> Clients</a></li>
+                    <li><a href="recruitment.html"><i class="fa-solid fa-magnifying-glass-chart"></i> Recruitment</a></li>
+                    <li><a href="schedule.html"><i class="fa-regular fa-clock"></i> Schedule</a></li>
+                    <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" alt="Profile Picture" class="profile-img" id="sidebar-avatar">
+                    <div class="user-info">
+                        <span class="user-name" id="sidebar-user-name">Loading...</span>
+                        <span class="user-badge" id="sidebar-user-role"><i class="fa-solid fa-award"></i> Agent</span>
+                    </div>
+                </div>
+                <a href="#" id="logout-btn" class="sidebar-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+            </div>
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="welcome-section">
+                    <h1 class="page-title">Appointments</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="appointment-search" placeholder="Search here">
+                    </div>
+                    <div class="notification-icon desktop-only">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge" style="background-color: #35c1ff;">1</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-grid grid-3">
+                <div class="stat-card">
+                    <div class="stat-icon calendar-icon">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p class="stat-label">Total Appointments</p>
+                        <h3 class="stat-value" id="stat-total-appts">-</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon clients-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p class="stat-label">Confirmed</p>
+                        <h3 class="stat-value" id="stat-confirmed-appts">-</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon plans-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p class="stat-label">Pending</p>
+                        <h3 class="stat-value" id="stat-pending-appts">-</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panels-grid grid-2-1">
+                
+                <div class="appt-table-panel">
+                    <div class="appt-table-header">
+                        <h2>Recent Client Appointments</h2>
+                        <span class="sort-by">Sort by <a href="#">Recently <i class="fa-solid fa-caret-down"></i></a></span>
+                    </div>
+                    
+                    <div class="appt-table-wrapper">
+                        <table class="appt-table">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Date</th>
+                                    <th>Service</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointments-table-body">
+                                <tr><td colspan="4" style="text-align: center; padding: 3rem; color: #8a8a8a;">Loading appointments...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination-bar">
+                        <span class="page-text">Showing <span id="pag-showing">0</span> of <span id="pag-total">0</span> results</span>
+                        <div class="page-numbers">
+                            <button class="page-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="page-btn active-page">1</button>
+                            <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-panels-wrapper">
+                    
+                    <div class="appt-side-card">
+                        <div class="side-card-header">
+                            <i class="fa-regular fa-clock text-red"></i>
+                            <div>
+                                <h2>Upcoming Today</h2>
+                                <p class="current-date" id="current-date-display">Today</p>
+                            </div>
+                        </div>
+                        <div class="side-card-content" id="upcoming-today-list">
+                            <p style="text-align: center; color: #8a8a8a; padding: 1rem 0;">Checking schedule...</p>
+                        </div>
+                    </div>
+
+                    <div class="appt-side-card">
+                        <div class="side-card-header">
+                            <i class="fa-solid fa-bolt text-blue"></i>
+                            <h2>Quick Actions</h2>
+                        </div>
+                        <div class="side-card-content">
+                            <button class="action-btn btn-navy-solid">
+                                <i class="fa-solid fa-plus icon-box-white"></i> Add Appointment
+                            </button>
+                            <button class="action-btn btn-white-outline">
+                                <i class="fa-solid fa-phone action-icon"></i> Contact Client
+                            </button>
+                            <button class="action-btn btn-white-outline">
+                                <i class="fa-regular fa-file-lines action-icon"></i> Generate Report
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const closeSidebarBtn = document.getElementById('close-sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+        }
+        hamburgerMenu.addEventListener('click', toggleSidebar);
+        closeSidebarBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Set Today's Date
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date-display').innerText = `Today, ${new Date().toLocaleDateString('en-US', options)}`;
+    </script>
+
+    <script src="js/appointments.js"></script>
+</body>
+</html>

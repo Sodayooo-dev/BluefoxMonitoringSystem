@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Fox Summit - Log In</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-left">
+            <div class="brand-content">
+                <picture>
+                    <source srcset="assets/images/logo.png" media="(max-width: 992px)">
+                    <img src="assets/images/logo-white.png" alt="Blue Fox Logo" style="width: 320px; height: auto;">
+                </picture>
+                <h1 class="agency-name">BLUE FOX<br>SUMMIT<br>INSURANCE<br>AGENCY</h1>
+            </div>
+        </div>
+        
+        <div class="login-right">
+            <div class="form-container">
+                <h1 class="welcome-text">Welcome back!</h1>
+                <h2 class="login-title">Log <span class="text-blue">in</span></h2>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="username" placeholder="Username / Email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <i class="fa-regular fa-eye-slash toggle-password" id="toggle-password-btn"></i>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkmark"></span>
+                            Remember Me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <div id="login-error" style="color: #d9534f; font-size: 0.9rem; margin-bottom: 15px; display: none; font-weight: 500;">
+                        Invalid username or password.
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" id="login-btn">
+                        <span id="btn-text">Log in</span>
+                    </button>
+                    
+                    <div class="divider">
+                        <span>Or</span>
+                    </div>
+                    
+                    <button type="button" class="btn-secondary" id="signup-btn">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+:root {
+    --primary-dark: #11053b;
+    --accent-blue: #2b3990;
+    --text-dark: #141719;
+    --text-gray: #8f8f8f;
+    --bg-input: #efefef;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Apply the background to the ENTIRE wrapper */
+.login-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    
+    /* Move the SVG here */
+    background-image: url('../assets/images/Login.svg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* Left Branding Side */
+.login-left {
+    flex: 1.2;
+    /* Remove all background properties from here */
+    background: transparent;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    /* We can also remove the drop-shadow filter, as your SVG already has the shadow baked into it */
+}
+
+.brand-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.agency-name {
+    color: var(--white);
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+/* Right Form Side */
+.login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.welcome-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2.5rem;
+}
+
+.text-blue {
+    color: var(--accent-blue);
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 20px 18px 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--bg-input);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.input-group input::placeholder {
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    cursor: pointer;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #11053b 0%, #2b3990 100%);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(17, 5, 59, 0.2);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #e5e5e5;
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #d5d5d5;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 992px) {
+    .agency-name {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-text {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-left {
+        flex: none;
+        height: 250px;
+        border-radius: 0;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        align-items: right;
+        justify-content: right;
+    }
+
+    .brand-content {
+        text-align: center;
+    }
+
+    .agency-name {
+        font-size: 2rem;
+    }
+
+    .login-right {
+        padding: 3rem 1.5rem;
+        align-items: flex-start;
+    }
+
+    .welcome-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        color: white;
+        mix-blend-mode: difference;
+        margin-bottom: 10px;
+    }
+
+    .login-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 2.5rem;
+        mix-blend-mode: difference;
+    }
+
+    .text-blue {
+        color: white;
+        mix-blend-mode: difference;
+    }
+
+    .brand-content {
+        display: flex;
+        align-items: center;
+        gap: 0epx;
+        padding: 0rem;
+    }
+}
