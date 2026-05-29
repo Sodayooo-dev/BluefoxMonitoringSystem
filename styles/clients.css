@@ -1,0 +1,481 @@
+/* ==============================================================
+   TARGET WORKSPACE LAYOUT STYLING MODIFICATIONS
+   ============================================================== */
+
+:root {
+  --app-bg-canvas: #f4f5f9;         /* Very light soft blueprint gray container canvas background */
+  --card-canvas: #ffffff;           /* Clean solid block white surface background */
+  --charcoal-primary: #121420;      /* Slate black primary typography font color */
+  --steel-muted: #626875;           /* Clear secondary administrative field labels */
+  --highlight-green-bg: #dff6dd;    /* Signature target matrix background status tag green tint */
+  --highlight-green-text: #2ca23d;  /* True vibrant operational highlight label green color */
+  --nav-dark-accent: #11053b;       /* Primary icon node block boundary coloring indicator */
+}
+
+/* TOP-LEVEL DISPLAY SPLIT CONFIGURATION SETUP */
+.content-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+/* STRUCTURAL INTERFACE SURFACE PANEL MODULES */
+.panel {
+  background: var(--card-canvas);
+  border-radius: 18px;              /* High-radius smoothed card corners from the image */
+  border: 1px solid #e1e3ea;
+  box-shadow: 0 4px 20px rgba(18, 20, 32, 0.03);
+  overflow: hidden;
+}
+
+/* TOP HEADER CONTAINER MIXED HEADER ALIGNMENTS */
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.serif-welcome {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #11053b;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.sub-welcome {
+  font-family: 'Poppins', sans-serif;
+  color: var(--steel-muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.top-bar-minimal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LEFT SIDE DIRECTORY ROSTER BLOCKS */
+.client-list-panel {
+  min-height: 760px;
+  background-color: var(--card-canvas);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.client-panel-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding: 0 4px;
+}
+
+.client-panel-top-row h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+}
+
+.add-btn-large {
+  background: none;
+  border: none;
+  font-size: 2rem;                  /* Large bold plus icon match */
+  color: var(--charcoal-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.add-btn-large:hover {
+  transform: scale(1.15);
+}
+
+.client-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.client-search-wrapper input {
+  width: 100%;
+  padding: 0.55rem 2.25rem 0.55rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #c2c6d1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.client-search-wrapper .search-inline-icon {
+  position: absolute;
+  right: 0.75rem;
+  color: #a0a6b5;
+  font-size: 0.9rem;
+}
+
+/* INDIVIDUAL ROSTER ENTRY DISPLAY CARDS */
+.client-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #c8e0c5;        /* Soft green accent frame mapping target roster active element */
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.client-profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e1e3ea;
+}
+
+.client-card-info {
+  flex: 1;
+}
+
+.client-card-info h4 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+}
+
+.client-card-info p {
+  color: var(--steel-muted);
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.status-pill-pill {
+  background-color: var(--highlight-green-bg);
+  color: var(--highlight-green-text);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border: 1px solid rgba(44, 162, 61, 0.2);
+}
+
+/* MAIN INFORMATION PROFILE IDENTITY HEADER CAP */
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-panel {
+  padding: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-main-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #d1d5db;
+}
+
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.hero-name-row h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--charcoal-primary);
+  letter-spacing: -0.3px;
+}
+
+.status-badge-green {
+  background-color: var(--highlight-green-bg);
+  color: var(--highlight-green-text);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.hero-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--charcoal-primary);
+  font-size: 0.84rem;
+}
+
+.hero-contact i {
+  width: 18px;
+  color: #7c8291;
+  font-size: 0.9rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+
+.meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-meta strong {
+  font-size: 0.78rem;
+  color: var(--charcoal-primary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.hero-meta span {
+  color: var(--steel-muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* EXTENDED GRID LABELS MATRIX LAYOUT */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Standard Header Title formatting with individual vector nodes mapping screenshot elements */
+.inner-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 4px;
+}
+
+.header-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.dark-blue-box {
+  background-color: #11053b;
+  color: #ffffff;
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.info-list span {
+  color: var(--charcoal-primary);
+  font-weight: 400;
+}
+
+.info-list strong {
+  color: var(--charcoal-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+.nested-status-pill-green {
+  background-color: var(--highlight-green-bg);
+  color: var(--highlight-green-text);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* CUSTOM UNIQUE INDEPENDENT BENEFICIARIES MATRIX STRUCTURE ROWS */
+.beneficiary-list-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.beneficiary-row-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.ben-index-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;                /* Large numbers from the image layout */
+  font-weight: 700;
+  color: #4b5297;
+  line-height: 1;
+  width: 24px;
+  text-align: center;
+}
+
+.ben-meta-labels {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ben-meta-labels strong {
+  font-size: 0.82rem;
+  color: var(--charcoal-primary);
+  font-weight: 500;
+}
+
+.ben-meta-labels span {
+  font-size: 0.74rem;
+  color: var(--steel-muted);
+  margin-top: 1px;
+}
+
+.ben-percent-badge {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--charcoal-primary);
+  border-bottom: 1px solid #c2c6d1;  /* Line under percentage values */
+  padding-bottom: 2px;
+}
+
+/* MANAGEMENT NOTEBOOK COMPONENT BLOCKS */
+.notes-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.notes-body-text {
+  font-size: 0.82rem;
+  color: var(--charcoal-primary);
+  line-height: 1.4;
+}
+
+.notes-bottom-meta {
+  margin-top: 1.25rem;
+  padding-top: 6px;
+}
+
+.notes-bottom-meta small {
+  font-size: 0.74rem;
+  color: var(--steel-muted);
+}
+
+/* ==============================================================\
+   RESPONSIVE DESIGN ADAPTATION LAYER OVERRIDES
+   ============================================================== */
+
+@media (max-width: 1400px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .hero-meta {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    margin-top: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .client-list-panel {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hero-meta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-list div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .info-list strong {
+    text-align: left;
+  }
+}
