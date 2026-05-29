@@ -1,0 +1,282 @@
+#image-container {
+  position: relative;
+  container-type: inline-size;
+  font-family: Poppins, Montserrat, sans-serif;
+}
+#image-container img {
+  width: 100%;
+  height: 100%;
+}
+#text-area-1 {
+  position: absolute;
+  width: 25.03%;
+  height: 29.91%;
+  top: 163.32%;
+  left: 77.39%;
+}
+#text-area-1-region-1 {
+  font-size: 3.93cqw;
+  text-align: start;
+  color: #ffffff;
+}
+#text-area-2 {
+  position: absolute;
+  width: 19.87%;
+  height: 4.96%;
+  top: 13.08%;
+  left: 43.54%;
+}
+#text-area-2-region-1 {
+  font-size: 2.37cqw;
+  text-align: start;
+  color: #ffffff;
+  font-weight: bold;
+}
+#text-area-3 {
+  position: absolute;
+  width: 7.16%;
+  height: 2.61%;
+  top: 85.87%;
+  left: 78.01%;
+}
+#text-area-3-region-1 {
+  font-size: 1.25cqw;
+  text-align: center;
+  color: #ececec;
+  font-weight: medium;
+}
+#text-area-4 {
+  position: absolute;
+  width: 7.16%;
+  height: 2.61%;
+  top: 85.87%;
+  left: 67.41%;
+}
+#text-area-4-region-1 {
+  font-size: 1.25cqw;
+  text-align: center;
+  color: #ececec;
+  font-weight: medium;
+}
+#text-area-5 {
+  position: absolute;
+  width: 4.23%;
+  height: 3.25%;
+  top: 32.74%;
+  left: 15.6%;
+}
+#text-area-5-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-6 {
+  position: absolute;
+  width: 4.23%;
+  height: 2.93%;
+  top: 36.44%;
+  left: 17.13%;
+}
+#text-area-6-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-7 {
+  position: absolute;
+  width: 4.23%;
+  height: 3.25%;
+  top: 32.74%;
+  left: 53%;
+}
+#text-area-7-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-8 {
+  position: absolute;
+  width: 8.83%;
+  height: 2.93%;
+  top: 36.44%;
+  left: 54.28%;
+}
+#text-area-8-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-9 {
+  position: absolute;
+  width: 18.16%;
+  height: 3.25%;
+  top: 45.48%;
+  left: 15.6%;
+}
+#text-area-9-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-10 {
+  position: absolute;
+  width: 11.03%;
+  height: 2.93%;
+  top: 49.19%;
+  left: 17.13%;
+}
+#text-area-10-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-11 {
+  position: absolute;
+  width: 11.96%;
+  height: 3.25%;
+  top: 58.27%;
+  left: 15.6%;
+}
+#text-area-11-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-12 {
+  position: absolute;
+  width: 19.46%;
+  height: 2.93%;
+  top: 61.98%;
+  left: 17.13%;
+}
+#text-area-12-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-13 {
+  position: absolute;
+  width: 17.99%;
+  height: 3.25%;
+  top: 45.48%;
+  left: 53%;
+}
+#text-area-13-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-14 {
+  position: absolute;
+  width: 12.01%;
+  height: 2.93%;
+  top: 49.19%;
+  left: 54.28%;
+}
+#text-area-14-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-15 {
+  position: absolute;
+  width: 21.57%;
+  height: 3.25%;
+  top: 58.27%;
+  left: 53%;
+}
+#text-area-15-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-16 {
+  position: absolute;
+  width: 12.01%;
+  height: 2.93%;
+  top: 61.98%;
+  left: 54.28%;
+}
+#text-area-16-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-17 {
+  position: absolute;
+  width: 11.96%;
+  height: 3.25%;
+  top: 70.38%;
+  left: 53.09%;
+}
+#text-area-17-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-18 {
+  position: absolute;
+  width: 5.97%;
+  height: 2.29%;
+  top: 75.72%;
+  left: 55.93%;
+}
+#text-area-18-region-1 {
+  font-size: 1.11cqw;
+  text-align: start;
+  color: #282828;
+  font-weight: medium;
+}
+#text-area-19 {
+  position: absolute;
+  width: 11.96%;
+  height: 3.25%;
+  top: 71.07%;
+  left: 15.6%;
+}
+#text-area-19-region-1 {
+  font-size: 1.53cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: semibold;
+}
+#text-area-20 {
+  position: absolute;
+  width: 28.99%;
+  height: 2.93%;
+  top: 74.78%;
+  left: 17.13%;
+}
+#text-area-20-region-1 {
+  font-size: 1.39cqw;
+  text-align: start;
+  color: #000000;
+  font-weight: medium;
+}
+#text-area-21 {
+  position: absolute;
+  width: 37.79%;
+  height: 5.07%;
+  top: 24.31%;
+  left: 31.1%;
+}
+#text-area-21-region-1 {
+  font-family: Bricolage Grotesque, Inter, sans-serif;
+  font-size: 2.42cqw;
+  text-align: start;
+  color: #1800ad;
+  font-weight: bold;
+}
