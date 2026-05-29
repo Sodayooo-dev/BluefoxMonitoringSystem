@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Blue Fox Summit</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles/settingsStyle.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <img src="assets/images/logo-white.png" alt="Blue Fox Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <h2 style="display:none; font-size: 1rem;">BLUE FOX SUMMIT</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="clients.html" class="nav-link">Clients</a>
+                <a href="recruitment.html" class="nav-link">Recruitment</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="settings.html" class="nav-link active">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="profile-info">
+                    <div class="avatar"></div>
+                    <div class="profile-text">
+                        <span class="name">Audrey Cristobal Fabian</span>
+                        <span class="role">MDRT</span>
+                    </div>
+                </div>
+                <a href="logout.html" class="logout-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <header class="page-header">
+                <h1>Settings</h1>
+                <p>Manage your Account and Preferences</p>
+            </header>
+
+            <!-- TWO COLUMN GRID -->
+            <div class="settings-grid">
+                
+                <!-- LEFT COLUMN -->
+                <div class="grid-column">
+                    
+                    <!-- Profile Settings Card -->
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <div class="icon-box">
+                                <!-- User SVG Icon -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                            <div class="header-text">
+                                <h2>Profile Settings</h2>
+                                <p>Manage your personal info and profile</p>
+                            </div>
+                        </div>
+                        <div class="card-list">
+                            <div class="list-item">
+                                <span class="label">Full Name</span>
+                                <span class="value">Audrey Cristobal Fabian <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Email Address</span>
+                                <span class="value">temp@gmail.com <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Phone Number</span>
+                                <span class="value">0123 456 7890 <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Profile Picture</span>
+                                <span class="value"><div class="mini-avatar"></div> <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Change Password</span>
+                                <span class="value"><span class="arrow">&rsaquo;</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Card -->
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <div class="icon-box">
+                                <!-- Sliders SVG Icon -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+                            </div>
+                            <div class="header-text">
+                                <h2>Preferences</h2>
+                                <p>Customize your dashboard</p>
+                            </div>
+                        </div>
+                        <div class="card-list">
+                            <div class="list-item">
+                                <span class="label">Theme</span>
+                                <span class="value">Light <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Date Format</span>
+                                <span class="value">MM/DD/YYYY <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Time Format</span>
+                                <span class="value">12-Hour (AM/PM) <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="label">Items per Page</span>
+                                <span class="value">10 <span class="arrow">&rsaquo;</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="grid-column">
+                    
+                    <!-- Account & Security Card -->
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <div class="icon-box">
+                                <!-- Shield SVG Icon -->
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <div class="header-text">
+                                <h2>Account & Security</h2>
+                                <p>Manage your account security and data</p>
+                            </div>
+                        </div>
+                        <div class="card-list">
+                            <div class="list-item block-item">
+                                <div class="item-text">
+                                    <span class="title">Two-Factor Authentication</span>
+                                    <span class="subtitle">Add an extra layer of security</span>
+                                </div>
+                                <span class="arrow">&rsaquo;</span>
+                            </div>
+                            <div class="list-item block-item">
+                                <div class="item-text">
+                                    <span class="title">Download My Data</span>
+                                    <span class="subtitle">Download a copy of your data</span>
+                                </div>
+                                <span class="arrow">&rsaquo;</span>
+                            </div>
+                            <div class="list-item block-item">
+                                <div class="item-text">
+                                    <span class="title text-danger">Deactivate My Account</span>
+                                    <span class="subtitle">Temporarily deactivate your account</span>
+                                </div>
+                                <span class="arrow">&rsaquo;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
