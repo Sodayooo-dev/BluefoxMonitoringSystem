@@ -51,24 +51,28 @@
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
         <main class="main-content schedule-page">
-            <header class="top-header dark-schedule-header">
-                <h1 class="page-title text-white">Scheduling</h1>
-                <div class="header-actions">
-                    <div class="search-bar white-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search here">
+            <div class="schedule-header-wrapper">
+                <header class="top-header">
+                    <div class="welcome-section">
+                        <h1 class="page-title text-white">Scheduling</h1>
                     </div>
-                    <div class="notification-bell">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="badge-count">1</span>
+                    <div class="header-actions">
+                        <div class="search-bar white-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search here">
+                        </div>
+                        <div class="notification-icon desktop-only">
+                            <i class="fa-solid fa-bell text-white"></i>
+                            <span class="badge" style="background-color: #35c1ff;">1</span>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>
+            </div>
 
             <div class="schedule-body">
                 <div class="schedule-toolbar">
                     <h2 class="schedule-headline">Here is your <span class="text-blue">Schedule !</span></h2>
-                    <button class="btn-dark-blue">
+                    <button class="action-btn btn-navy-solid" style="width: auto; margin: 0; padding: 12px 24px;">
                         <i class="fa-solid fa-plus"></i> Add Schedule
                     </button>
                 </div>
@@ -93,6 +97,7 @@
     </div>
 
     <script>
+        // Sidebar Toggle Logic
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const closeSidebarBtn = document.getElementById('close-sidebar');
         const sidebar = document.getElementById('sidebar');
@@ -107,7 +112,6 @@
         closeSidebarBtn.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', toggleSidebar);
     </script>
-
     <script src="js/schedule.js"></script>
 </body>
 </html>
