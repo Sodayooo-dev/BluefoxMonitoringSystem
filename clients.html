@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Fox Summit - Clients Dashboard</title>
+  
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/clients.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+    <div class="mobile-header">
+        <div class="hamburger" id="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <h2>BLUE FOX SUMMIT</h2>
+        <div class="mobile-profile">
+            <img src="https://ui-avatars.com/api/?name=User&background=random&rounded=true" alt="Profile" class="profile-img">
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <h2>BLUE FOX SUMMIT<br>INSURANCE AGENCY</h2>
+            </div>
+            <div class="close-sidebar" id="close-sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html"><i class="fa-solid fa-border-all"></i> Dashboard</a></li>
+                <li><a href="appointments.html"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+                <li class="active"><a href="clients.html"><i class="fa-solid fa-users"></i> Clients</a></li>
+                <li><a href="recruitment.html"><i class="fa-solid fa-user-plus"></i> Recruitment</a></li>
+                <li><a href="schedule.html"><i class="fa-solid fa-calendar-days"></i> Schedule</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <main class="main-content">
+        
+        <div class="welcome-section">
+            <div class="welcome-text-block">
+                <h1 class="serif-welcome">Clients</h1>
+                <p class="sub-welcome">Let's look at your Dashboard</p>
+            </div>
+            <header class="top-bar-minimal">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search here">
+                </div>
+                <div class="profile-actions">
+                    <div class="notification-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <section class="content-grid">
+
+            <div class="panel client-list-panel">
+                <div class="client-panel-top-row">
+                    <h3>All Clients</h3>
+                    <button class="add-btn-large"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="client-list-content">
+                    <div class="client-search-wrapper">
+                        <input type="text" placeholder="Search clients...">
+                        <i class="fa-solid fa-magnifying-glass search-inline-icon"></i>
+                    </div>
+
+                    <div class="client-card active-client">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120" alt="Client Avatar" class="client-profile-avatar">
+                        <div class="client-card-info">
+                            <h4>Kurt Calubaquib</h4>
+                            <p>Policy: VUL1234567</p>
+                        </div>
+                        <span class="status-pill-pill">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-wrapper">
+
+                <div class="panel hero-panel">
+                    <div class="hero-left">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" alt="Client Headshot" class="hero-main-avatar">
+                        <div class="hero-info">
+                            <div class="hero-name-row">
+                                <h2>Kurt Calu</h2>
+                                <span class="status-badge-green">Active Client</span>
+                            </div>
+                            <div class="hero-contact">
+                                <p><i class="fa-solid fa-phone"></i> 0945 6536 360</p>
+                                <p><i class="fa-solid fa-envelope"></i> jhonmark@gmail.com</p>
+                                <p><i class="fa-solid fa-location-dot"></i> 123 Mabini St, Barangay San Antonio, Makati City, Metro Manila 1203</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="meta-col">
+                            <div><strong>Client ID</strong><span>CLT-000125</span></div>
+                            <div><strong>Date Registered</strong><span>January 15, 2024</span></div>
+                            <div><strong>Assigned Agent</strong><span>Audrey Cristobal Fabian</span></div>
+                        </div>
+                        <div class="meta-col">
+                            <div><strong>Birthdate</strong><span>May 12, 2004(21 yrs old)</span></div>
+                            <div><strong>Gender</strong><span>Male</span></div>
+                            <div><strong>Civil Status</strong><span>Single</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+
+                    <div class="panel info-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-solid fa-user"></i></span>
+                            <h3>Personal Information</h3>
+                        </div>
+                        <div class="info-list">
+                            <div><span>Full Name</span><strong>Kurt Calubaquib</strong></div>
+                            <div><span>Nickname</span><strong>sfsvfv</strong></div>
+                            <div><span>Birthdate</span><strong>sdvs 12, 2004</strong></div>
+                            <div><span>Age</span><strong>21 years old</strong></div>
+                            <div><span>Gender</span><strong>Male</strong></div>
+                            <div><span>Civil Status</span><strong>Single</strong></div>
+                            <div><span>Nationality</span><strong>Filipino</strong></div>
+                            <div><span>Occupation</span><strong>Data Analyst</strong></div>
+                            <div><span>Monthly income</span><strong>P80,000.00</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="panel info-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-solid fa-shield-halved"></i></span>
+                            <h3>Insurance Information</h3>
+                        </div>
+                        <div class="info-list">
+                            <div><span>Policy Number</span><strong>Policy: VUL1234567</strong></div>
+                            <div><span>Insurance Type</span><strong>Variable Universal Life</strong></div>
+                            <div><span>Plan Name</span><strong>Pru Life Prosperity VUL</strong></div>
+                            <div><span>Coverage Amount</span><strong>P2,000,000</strong></div>
+                            <div><span>Monthly Premium</span><strong>P8,000</strong></div>
+                            <div><span>Payment Method</span><strong>Auto Debit (EDO)</strong></div>
+                            <div><span>Policy Status</span><span class="nested-status-pill-green">Active</span></div>
+                            <div><span>Start Date</span><strong>February 01, 2025</strong></div>
+                            <div><span>Renewal Date</span><strong>February 01, 2025</strong></div>
+                            <div><span>Next Premium Due</span><strong>June 01, 2025</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="panel info-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-solid fa-users"></i></span>
+                            <h3>Beneficiaries</h3>
+                        </div>
+                        <div class="beneficiary-list-custom">
+                            <div class="beneficiary-row-item">
+                                <span class="ben-index-num">1</span>
+                                <div class="ben-meta-labels">
+                                    <strong>Nina Sales (Mother)</strong>
+                                    <span>Primary Beneficiary</span>
+                                </div>
+                                <span class="ben-percent-badge">60%</span>
+                            </div>
+                            <div class="beneficiary-row-item">
+                                <span class="ben-index-num">2</span>
+                                <div class="ben-meta-labels">
+                                    <strong>Nina jr (Brother)</strong>
+                                    <span>Contingent Beneficiary</span>
+                                </div>
+                                <span class="ben-percent-badge">30%</span>
+                            </div>
+                            <div class="beneficiary-row-item">
+                                <span class="ben-index-num">3</span>
+                                <div class="ben-meta-labels">
+                                    <strong>Karl Calu (Brother)</strong>
+                                    <span>Contingent Beneficiary</span>
+                                </div>
+                                <span class="ben-percent-badge">10%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel info-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-solid fa-phone-volume"></i></span>
+                            <h3>Emergency Contact</h3>
+                        </div>
+                        <div class="info-list">
+                            <div><span>Name</span><strong>Nina Sales</strong></div>
+                            <div><span>Relationship</span><strong>Mother</strong></div>
+                            <div><span>Contact Number</span><strong>09278456342</strong></div>
+                            <div><span>Address</span><strong>123 Mabini St, Makati City</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="panel info-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-solid fa-heart-pulse"></i></span>
+                            <h3>Health & Risk Profile</h3>
+                        </div>
+                        <div class="info-list">
+                            <div><span>Health Condition</span><strong>Good</strong></div>
+                            <div><span>Smoker</span><strong>No</strong></div>
+                            <div><span>Existing Illness</span><strong>None</strong></div>
+                            <div><span>Risk Appetite</span><strong>Moderate</strong></div>
+                            <div><span>Financial Goal</span><strong>Family and Retirement</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="panel info-card notes-card">
+                        <div class="inner-panel-header">
+                            <span class="header-icon-box dark-blue-box"><i class="fa-regular fa-clipboard"></i></span>
+                            <h3>Notes</h3>
+                        </div>
+                        <div class="notes-content-area">
+                            <p class="notes-body-text">Client is planning for early retirement.</p>
+                            <p class="notes-body-text">Interested in adding health insurance for whole family.</p>
+                        </div>
+                        <div class="notes-bottom-meta">
+                            <small>Last updated: May 20, 2023 by Audrey F.</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+  </div>
+
+  <script>
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const closeSidebarBtn = document.getElementById('close-sidebar');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+
+      function toggleSidebar() {
+          sidebar.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+      }
+
+      hamburgerMenu.addEventListener('click', toggleSidebar);
+      closeSidebarBtn.addEventListener('click', toggleSidebar);
+      overlay.addEventListener('click', toggleSidebar);
+  </script>
+</body>
+</html>
