@@ -3,99 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings - Bluefox Monitoring System</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles/style.css">
-    
+    <title>Settings - Blue Fox Summit</title>
+    <!-- Fonts matching your design -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="settingsStyle.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo-white.png" alt="Bluefox Logo" style="width: 150px;">
-        </div>
-        <ul class="nav-links">
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="appointments.html">Appointments</a></li>
-            <li><a href="recruitment.html">Recruitment</a></li>
-            <li><a href="settings.html" class="active">Settings</a></li>
-        </ul>
-    </nav>
-
-    <main class="main-content">
-        <header class="page-header">
-            <h1>Settings</h1>
-            <p>Manage your account and preferences.</p>
-        </header>
-
-        <div class="settings-container">
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <img src="logo.png" alt="Blue Fox Logo" onerror="this.style.display='none'">
+                <h2>BLUE FOX SUMMIT<br><span>INSURANCE AGENCY</span></h2>
+            </div>
             
-            <section class="settings-card">
-                <div class="card-header">
-                    <h2>Preferences</h2>
-                    <p>Customize your dashboard</p>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="clients.html" class="nav-link">Clients</a>
+                <a href="recruitment.html" class="nav-link">Recruitment</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="settings.html" class="nav-link active">Settings</a>
+            </nav>
+
+            <div class="sidebar-profile">
+                <div class="profile-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="name">Audrey Cristobal Fabian</p>
+                        <p class="role">MDRT</p>
+                    </div>
                 </div>
+                <a href="logout.html" class="logout-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-titles">
+                    <h1>Settings</h1>
+                    <p>Manage your Account and Preferences</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search here...">
+                </div>
+            </header>
+
+            <!-- Settings Two-Column Grid -->
+            <div class="settings-grid">
                 
-                <div class="settings-row">
-                    <div class="setting-info">
-                        <label>Theme</label>
-                    </div>
-                    <div class="setting-action">
-                        <select class="form-select">
-                            <option value="light">Light</option>
-                            <option value="dark">Dark</option>
-                        </select>
-                    </div>
+                <!-- LEFT COLUMN -->
+                <div class="settings-column">
+                    
+                    <!-- Profile Settings Card -->
+                    <section class="settings-card">
+                        <div class="card-header">
+                            <div class="header-icon profile-icon"></div>
+                            <div class="header-text">
+                                <h2>Profile Settings</h2>
+                                <p>Manage your personal info and profile</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-item">
+                                <span class="item-label">Full Name</span>
+                                <span class="item-value">Audrey Cristobal Fabian <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Email Address</span>
+                                <span class="item-value">temp@gmail.com <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Phone Number</span>
+                                <span class="item-value">0123 456 7890 <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Profile Picture</span>
+                                <span class="item-value">
+                                    <div class="mini-avatar"></div> 
+                                    <span class="chevron">&rsaquo;</span>
+                                </span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Change Password</span>
+                                <span class="item-value"><span class="chevron">&rsaquo;</span></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Preferences Card -->
+                    <section class="settings-card">
+                        <div class="card-header">
+                            <div class="header-icon pref-icon"></div>
+                            <div class="header-text">
+                                <h2>Preferences</h2>
+                                <p>Customize your dashboard</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-item">
+                                <span class="item-label">Theme</span>
+                                <span class="item-value">Light <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Date Format</span>
+                                <span class="item-value">MM/DD/YYYY <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Time Format</span>
+                                <span class="item-value">12-Hour (AM/PM) <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                            <div class="list-item">
+                                <span class="item-label">Items per Page</span>
+                                <span class="item-value">10 <span class="chevron">&rsaquo;</span></span>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
 
-                <div class="settings-row">
-                    <div class="setting-info">
-                        <label>Date Format</label>
-                    </div>
-                    <div class="setting-action">
-                        <select class="form-select">
-                            <option value="mm/dd/yyyy">MM/DD/YYYY</option>
-                            <option value="dd/mm/yyyy">DD/MM/YYYY</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
+                <!-- RIGHT COLUMN -->
+                <div class="settings-column">
+                    
+                    <!-- Account & Security Card -->
+                    <section class="settings-card">
+                        <div class="card-header">
+                            <div class="header-icon security-icon"></div>
+                            <div class="header-text">
+                                <h2>Account & Security</h2>
+                                <p>Manage your account security and data</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-item block-item">
+                                <div class="item-text-block">
+                                    <span class="item-label strong">Two-Factor Authentication</span>
+                                    <span class="item-subtext">Add an extra layer of security</span>
+                                </div>
+                                <span class="chevron">&rsaquo;</span>
+                            </div>
+                            <div class="list-item block-item">
+                                <div class="item-text-block">
+                                    <span class="item-label strong">Download My Data</span>
+                                    <span class="item-subtext">Download a copy of your data</span>
+                                </div>
+                                <span class="chevron">&rsaquo;</span>
+                            </div>
+                            <div class="list-item block-item danger">
+                                <div class="item-text-block">
+                                    <span class="item-label strong danger-text">Deactivate My Account</span>
+                                    <span class="item-subtext">Temporarily deactivate your account</span>
+                                </div>
+                                <span class="chevron">&rsaquo;</span>
+                            </div>
+                        </div>
+                    </section>
 
-            <section class="settings-card">
-                <div class="card-header">
-                    <h2>Data & Privacy</h2>
                 </div>
-                
-                <div class="settings-row">
-                    <div class="setting-info">
-                        <label>Download My Data</label>
-                        <span>Download a copy of your data</span>
-                    </div>
-                    <div class="setting-action">
-                        <button class="btn btn-primary">Download</button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="settings-card danger-zone">
-                <div class="card-header">
-                    <h2>Account Management</h2>
-                </div>
-                
-                <div class="settings-row">
-                    <div class="setting-info">
-                        <label>Deactivate My Account</label>
-                        <span>Temporarily deactivate your account</span>
-                    </div>
-                    <div class="setting-action">
-                        <button class="btn btn-danger">Deactivate</button>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </main>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
