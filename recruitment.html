@@ -51,44 +51,41 @@
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
         <main class="main-content">
-            <header class="top-header">
-                <div class="welcome-section">
-                    <h1 class="page-title">Recruitment Management</h1>
-                </div>
-                <div class="header-actions">
-                    <div class="notification-icon desktop-only">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="badge" style="background-color: #35c1ff;">1</span>
-                    </div>
-                </div>
-            </header>
+    <header class="top-header" style="align-items: center; margin-bottom: 1.5rem;">
+        <div class="welcome-section">
+            <h1 class="page-title" style="color: #1800ad; font-size: 2.5rem;">Recruitment Management</h1>
+        </div>
+        <div class="header-actions">
+            <button class="action-btn" style="background-color: #2b3990; color: white; border: none; padding: 12px 24px; margin-bottom: 0; width: auto; font-size: 0.9rem;">
+                <i class="fa-solid fa-plus"></i> Add New Recruit
+            </button>
+        </div>
+    </header>
 
-            <section class="recruitment-toolbar">
-                <div class="search-bar recruit-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="recruit-search" placeholder="Search recruits here">
-                </div>
-                
-                <div class="toolbar-actions">
-                    <select id="recruit-status-filter" class="custom-select">
-                        <option value="all">All Status</option>
-                        <option value="ongoing">Ongoing</option>
-                        <option value="hired">Hired</option>
-                        <option value="rejected">Rejected</option>
-                    </select>
-                    
-                    <button class="action-btn btn-navy-solid" style="margin-bottom: 0; width: auto; padding: 10px 20px;">
-                        Add New Recruit
-                    </button>
-                </div>
-            </section>
+    <section class="recruitment-toolbar" style="background: transparent; box-shadow: none; padding: 0; margin-bottom: 2rem;">
+        <div style="display: flex; gap: 1rem; width: 100%;">
+            <div class="search-bar recruit-search" style="flex-grow: 1; background: white; max-width: none; border-radius: 10px;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="recruit-search" placeholder="Search recruits here">
+            </div>
+            
+            <select id="recruit-status-filter" class="custom-select" style="background: white; border: none; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-width: 180px; padding: 0 20px;">
+                <option value="all">All Status</option>
+                <option value="coding loop">Coding Loop</option>
+                <option value="documents signed">Documents Signed</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="ongoing">Ongoing</option>
+                <option value="hired">Hired</option>
+            </select>
+        </div>
+    </section>
 
-            <section class="recruits-grid" id="recruits-container">
-                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #8a8a8a;">
-                    Loading recruits...
-                </div>
-            </section>
-        </main>
+    <section class="recruits-grid" id="recruits-container">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #8a8a8a;">
+            Loading recruits...
+        </div>
+    </section>
+</main>
     </div>
 
     <script>

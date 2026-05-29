@@ -50,38 +50,31 @@ function loadRecruits() {
 
             data.recruits.forEach(recruit => {
                 const fullName = `${recruit.first_name} ${recruit.last_name}`;
-                const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=random`;
-                
-                let statusClass = 'badge-pending';
-                if (recruit.status === 'hired') statusClass = 'badge-confirmed';
-                if (recruit.status === 'rejected') statusClass = 'badge-rejected';
+                // Fallback to a gray UI avatar matching the mockup if no image is present
+                const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=8a8a8a&color=fff&rounded=true`;
 
                 const card = document.createElement('div');
                 card.className = 'recruit-card';
-                // Store the status as a data attribute so we can easily filter it later
                 card.setAttribute('data-status', recruit.status);
+                
+                // Matches the horizontal mockup layout
                 card.innerHTML = `
-                    <div class="recruit-header">
-                        <div class="recruit-avatar-wrapper">
-                            <img src="${avatarUrl}" alt="${fullName}" class="recruit-avatar">
-                        </div>
-                        <span class="badge ${statusClass}">${recruit.status.charAt(0).toUpperCase() + recruit.status.slice(1)}</span>
+                    <div class="recruit-avatar-wrapper">
+                        <img src="${avatarUrl}" alt="${fullName}" class="recruit-avatar">
                     </div>
-                    <h3 class="recruit-name">${fullName}</h3>
-                    <div class="recruit-contact-info">
-                        <p><i class="fa-regular fa-envelope"></i> ${recruit.email || 'No email provided'}</p>
-                        <p><i class="fa-solid fa-phone"></i> ${recruit.phone || 'No phone provided'}</p>
-                        <p><i class="fa-regular fa-calendar"></i> Applied: ${new Date(recruit.created_at).toLocaleDateString()}</p>
+                    <div class="recruit-details">
+                        <h3 class="recruit-name">${fullName}</h3>
+                        <div class="recruit-status">Status: ${recruit.status}</div>
+                        <button class="view-details-btn">View Details</button>
                     </div>
-                    <button class="view-details-btn">View Full Profile</button>
                 `;
                 container.appendChild(card);
             });
             
+            // Re-initialize filter logic if you are using it
             setupStatusFilter();
         } else {
             console.error("Error loading recruits: ", data.error);
-            container.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: #ff3b3b;">Failed to load recruits.</div>';
         }
     })
     .catch(error => console.error("Fetch Error: ", error));
@@ -95,7 +88,9 @@ function setupStatusFilter() {
         const cards = document.querySelectorAll('.recruit-card');
         
         cards.forEach(card => {
-            if (selectedValue === 'all' || card.getAttribute('data-status') === selectedValue) {
+            const cardStatus = (card.getAttribute('data-status') || '').toLowerCase();
+            
+            if (selectedValue === 'all' || cardStatus === selectedValue) {
                 card.style.display = 'flex';
             } else {
                 card.style.display = 'none';
