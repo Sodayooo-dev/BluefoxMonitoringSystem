@@ -72,7 +72,7 @@
             <div class="schedule-body">
                 <div class="schedule-toolbar">
                     <h2 class="schedule-headline">Here is your <span class="text-blue">Schedule !</span></h2>
-                    <button class="action-btn btn-navy-solid" style="width: auto; margin: 0; padding: 12px 24px;">
+                    <button id="open-add-schedule-btn" class="action-btn btn-navy-solid" style="width: auto; margin: 0; padding: 12px 24px;">
                         <i class="fa-solid fa-plus"></i> Add Schedule
                     </button>
                 </div>
@@ -83,35 +83,72 @@
                 </div>
 
                 <div class="calendar-wrapper">
-                    <div class="calendar-nav">
-                        <button class="nav-arrow" id="prev-week"><i class="fa-solid fa-arrow-left"></i></button>
-                        <h3 class="current-date-range" id="date-range-display">Week of June 1, 2026 to June 7, 2026</h3>
-                        <button class="nav-arrow" id="next-week"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-
-                    <div class="calendar-grid" id="weekly-grid">
-                        </div>
-                </div>
+            <div class="calendar-nav">
+                <button class="nav-arrow" id="prev-week"><i class="fa-solid fa-arrow-left"></i></button>
+                <h3 class="current-date-range" id="date-range-display">Week of June 1, 2026 to June 7, 2026</h3>
+                <button class="nav-arrow" id="next-week"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
-        </main>
+            <div class="calendar-grid" id="weekly-grid"></div>
+        </div>
     </div>
+</main>
+</div> <div class="modal-overlay" id="add-schedule-modal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <div class="modal-title">
+                <i class="fa-regular fa-file-lines"></i> Add Schedule
+            </div>
+            <button class="close-modal-btn" id="close-modal-x"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+            <form id="add-schedule-form">
+                <div class="form-group">
+                    <label>Name of Activity</label>
+                    <input type="text" id="activity-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="activity-date" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Start Time</label>
+                        <input type="time" id="start-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label>End Time</label>
+                        <input type="time" id="end-time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="activity-notes" rows="4"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-close-modal" id="close-modal-btn">CLOSE</button>
+            <button type="submit" form="add-schedule-form" class="btn-save-modal">SAVE</button>
+        </div>
+    </div>
+</div>
 
-    <script>
-        // Sidebar Toggle Logic
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const closeSidebarBtn = document.getElementById('close-sidebar');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
+<script>
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const closeSidebarBtn = document.getElementById('close-sidebar');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
 
-        function toggleSidebar() {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
-        }
-        hamburgerMenu.addEventListener('click', toggleSidebar);
-        closeSidebarBtn.addEventListener('click', toggleSidebar);
-        overlay.addEventListener('click', toggleSidebar);
-    </script>
-    <script src="js/schedule.js"></script>
+    function toggleSidebar() {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+    }
+    hamburgerMenu.addEventListener('click', toggleSidebar);
+    closeSidebarBtn.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', toggleSidebar);
+</script>
+
+<script src="js/schedule.js"></script>
 </body>
 </html>

@@ -1578,6 +1578,90 @@ body {
     }
     .schedule-headline { font-size: 2.5rem; }
 }
+<<<<<<< HEAD
+
+/* ==============================================================
+   ADD SCHEDULE MODAL STYLES
+   ============================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #11053b 0%, #211c6a 100%);
+    color: white;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-title i {
+    font-size: 1.4rem;
+}
+
+.close-modal-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+    color: #cbd5e1;
+}
+
+.modal-body {
+    padding: 1.5rem 2rem;
+    background-color: white;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+=======
 /* =========================================
    GLOBAL RESET & FONTS
 ========================================= */
@@ -1712,10 +1796,93 @@ body {
 }
 
 .profile-text {
+>>>>>>> 584d0eb0fde52531b9fb43e3bfdca7f8a30a9105
     display: flex;
     flex-direction: column;
 }
 
+<<<<<<< HEAD
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--sidebar-bg);
+    margin-bottom: 0.4rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--sidebar-bg);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.modal-footer {
+    background-color: var(--sidebar-bg);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-close-modal {
+    background-color: #9ca3af;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-close-modal:hover {
+    background-color: #6b7280;
+}
+
+.btn-save-modal {
+    background-color: #4c96ff;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-save-modal:hover {
+    background-color: #3b82f6;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+=======
 .profile-text .name {
     font-size: 0.85rem;
     font-weight: 600;
@@ -1926,5 +2093,6 @@ body {
         margin-left: 0;
         width: 100%;
         padding: 1.5rem;
+>>>>>>> 584d0eb0fde52531b9fb43e3bfdca7f8a30a9105
     }
 }
