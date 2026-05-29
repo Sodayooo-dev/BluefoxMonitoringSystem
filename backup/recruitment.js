@@ -98,24 +98,3 @@ function setupStatusFilter() {
         });
     });
 }
-
-document.addEventListener('click', function(e) {
-    if (e.target && e.target.classList.contains('view-details-btn')) {
-        const modal = document.getElementById('recruit-details-modal');
-        modal.classList.add('active');
-        
-        // You can populate the modal fields here based on the specific recruit clicked
-        // Example: document.getElementById('modal-name').innerText = selectedRecruit.name;
-    }
-});
-
-document.getElementById('close-modal').addEventListener('click', function() {
-    document.getElementById('recruit-details-modal').classList.remove('active');
-});
-
-// Close modal when clicking outside of it
-document.getElementById('recruit-details-modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.classList.remove('active');
-    }
-});
